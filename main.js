@@ -65,3 +65,39 @@ function updateJadwalSholat() {
 
 updateJadwalSholat();
 setInterval(updateJadwalSholat, 60000);
+
+//email kontak
+
+emailjs.init("Iqqz1KZ4CELkF1XPr");
+
+document.getElementById("formKontak").addEventListener("submit", function(e) {
+  e.preventDefault();
+  const email = document.getElementById("email").value;
+  const pesan = document.getElementById("pesan").value;
+  emailjs.send("service_2cte4b6", "template_59f3v8a", {
+    title: "Pesan dari Website", 
+    name: email.split("@")[0],
+    email: email,
+    message: pesan,
+    time: new Date().toLocaleString()
+  })
+  .then(() => {
+    showPopup("Pesan berhasil dikirim! Silakan cek email Anda atau folder spam.");
+    document.getElementById("formKontak").reset();
+  }, (error) => {
+    alert("Gagal mengirim pesan: " + JSON.stringify(error));
+  });
+});
+
+function showPopup(message) {
+  const popup = document.getElementById("popupAlert");
+  document.getElementById("popupMessage").textContent = message;
+  popup.classList.remove("hidden");
+  setTimeout(() => popup.classList.add("hidden"), 10000);
+}
+
+function closePopup() {
+  const popup = document.getElementById("popupAlert");
+  popup.classList.add("hidden");
+}
+

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MPM Al Misykat</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="Assets/logo.jpg" type="image/jpeg">
+  <script src="https://kit.fontawesome.com/9d037bf2e6.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.lordicon.com/lordicon.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="/Assets/logo.jpg" alt="MPM Al-Misykat">
+      <a href="#hero"><strong> Mahasiswa Pencinta Masjid (MPM) <span> <i><br>Al Misykat</i></span></strong></a>
+    </div>
+    <nav class="navigation">
+      <a href="index.html#hero"><b>Beranda</b></a>
+      <a href="index.html#jadwal"><b>Jadwal Sholat</b></a>
+      <a href="index.html#kegiatan"><b>Kegiatan</b></a>
+      <a href="index.html#siarandakwah"><b>Siaran Dakwah</b></a>
+      
+      <div class="dropdown">
+        <a href="#info"><b>Informasi</b></a>
+        <div class="dropdown-content">
+          <a href="perekrutan.html"><b>Perekrutan Anggota</b></a>
+          <a href="kampus.html"><b>Berita Kampus</b></a>
+          <a href="gaza.html"><b>Berita Gaza</b></a>
+        </div>
+      </div>    
+      
+      <div class="dropdown">
+        <a href="#tentang"><b>Tentang</b></a>
+        <div class="dropdown-content">
+            <a href="profil.html"><b>Profil Masjid</b></a>
+            <a href="sejarah.html"><b>Sejarah Masjid</b></a>
+            <a href="struktur.html"><b>Struktur Organisasi</b></a>
+            <a href="visimisi.html"><b>Visi & Misi</b></a>
+            <a href="alumni.html"><b>Alumni MPM</b></a>
+        </div>
+      </div>
+      <a href="kontak.html"><b>Kontak</b></a>
+    </nav>
+    <a href="#menu" id="menu"><i class="fa-solid fa-bars"></i></a>
+  </header>
+
+<section id="kontak">
+  <h2 class="section-title">Kontak Kami</h2>
+  <div class="kontak-container">
+    <div class="kontak-map">
+      <h2>Lokasi Masjid</h2>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!4v1754400088354!6m8!1m7!1s8Oy3P8N6gpc22JgxW1rKkw!2m2!1d-4.003876636057557!2d122.5218675768366!3f14.307783772187008!4f-30.943984727457895!5f0.7820865974627469" 
+        width="100%" 
+        height="90%" 
+        style="border:0; border-radius: 10px;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+    <div class="contact-form">
+      <h2>Hubungi Kami</h2>
+      <form id="formKontak">
+        <div class="form-group">
+          <label for="email">Email Anda:</label>
+          <input type="email" id="email" name="email" required placeholder="Masukkan email kamu">
+        </div>
+        <div class="form-group">
+          <label for="pesan">Pesan:</label>
+          <textarea id="pesan" name="pesan" rows="4" required placeholder="Tulis pesan kamu disini"></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit">Kirim</button>
+        </div>
+      </form>
+      <div class="social-icons">
+        <a href="kontak.html" target="_blank"><lord-icon src="https://cdn.lordicon.com/vmxvhdko.json" trigger="hover" style="width:60px;height:60px;"></lord-icon></a>
+        <a href="kontak.html" target="_blank"><lord-icon src="https://cdn.lordicon.com/lyjuidpq.json" trigger="morph" state="morph-logotype" colors="primary:#121331,secondary:#e83a30" style="width:60px; height:60px"></lord-icon></a>
+        <a href="kontak.html" target="_blank"><lord-icon src="https://cdn.lordicon.com/tgyvxauj.json" trigger="hover" colors="primary:#121331,secondary:#ee66aa" style="width:60px;height:60px"></lord-icon></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="popupAlert" class="popup-alert hidden">
+  <div class="popup-content">
+    <p id="popupMessage">Pesan berhasil dikirim! Silakan cek email Anda atau folder spam.</p>
+    <button onclick="closePopup()">Tutup</button>
+  </div>
+</div>
+
+
+  <!-- Footer -->
+  <div class="footer">
+    <footer>
+      &copy; 2025 MPM Al Misykat. All rights reserved.
+    </footer>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
